@@ -70,10 +70,7 @@ public class MemberController {
             model.addAttribute("errorMessage", e.getMessage());
             return "member/signup";
         }
-
-
         recipeService.recipeRatingSave(memberDto.getLoginId(), id,ratings);
-
 
         return "redirect:/member/login";
     }
